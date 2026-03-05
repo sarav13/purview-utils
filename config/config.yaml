@@ -1,0 +1,18 @@
+tenant_id: "xxxxxxxx"
+client_id: "xxxxxxxx"
+client_secret: "xxxxxxxx"
+
+purview_account: "pur-001"
+collection_id: "xxxxxxxx"
+
+search:
+  asset_type: "SQL Server"
+  object_type: "Tables"
+  limit: 25
+
+classifications:
+  - MICROSOFT.PERSONAL.IPADDRESS
+  - MICROSOFT.PERSONAL.DATE_OF_BIRTH
+  - MICROSOFT.PERSONAL.GEOLOCATION
+  - MICROSOFT.PERSONAL.GENDER
+  - MICROSOFT.PERSONAL.PHYSICALADDRESS
