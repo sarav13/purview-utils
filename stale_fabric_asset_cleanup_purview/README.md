@@ -1,14 +1,33 @@
-# purview-utils
-
-This repository contains scripts created during early work with Microsoft Purview to automate common purview utilities that would help with the governance.
-
----
-
 ## Stale Fabric Asset Cleanup in Purview
 
 ### Background
 
 Understanding how Fabric assets are represented in Purview is key to identifying stale/orphaned assets.
+
+## Prerequisites:
+- Python 3.8 or higher
+- Access to a Microsoft Purview account
+- Access to Microsoft Fabric workspace (Lakehouse + SQL Endpoint)
+- Azure AD App Registration (Service Principal) with required permissions
+
+Required Python packages (install via `pip install -r requirements.txt`):
+
+   - azure-purview-datamap
+   - azure-identity
+   - azure-core
+   - pandas
+   - python-dotenv
+   - requests
+   - msal
+   - pyodbc
+
+---
+
+## Usage
+1. Set up your environment variables -provided an sample .env file
+2. Execute the script
+   "python cleaup_fabric_assets.py"
+
 
 #### Fabric → Purview Structure
 
@@ -77,13 +96,6 @@ An asset is considered **stale** if:
 
 ---
 
-## Scripts Included
-
-- `_stale_fabric_asset_cleanup_purview`  
-  Script to detect and clean up stale Fabric assets in Purview
-
----
-
 ## Future Improvements 
 
 - Soft-delete validation before permanent removal  
@@ -99,4 +111,3 @@ An asset is considered **stale** if:
 - Focused on improving catalog accuracy and governance hygiene  
 
 ---
-
