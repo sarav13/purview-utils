@@ -1,0 +1,8 @@
+azure-purview-datamap
+azure-identity
+azure-core
+pandas
+python-dotenv
+requests
+msal
+pyodbc
