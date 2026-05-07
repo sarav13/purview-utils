@@ -11,7 +11,6 @@ them to every asset - preserving all existing labels.
 ```
 purview_labeler/
 ├── purview_labeler.py        ← single-file solution (all modules inside)
-├── test_purview_labeler.py   ← pytest unit tests (no Purview connection needed)
 ├── requirements.txt
 ├── .env.template             ← copy to .env and fill in values
 └── README.md
@@ -117,6 +116,4 @@ Logs are written to both stdout and `purview_labeler.log`.
 | Token auto-refresh | `azure-identity` `ClientSecretCredential` handles AAD token expiry transparently |
 | Merge before PUT | `GET entity → merge → PUT labels` prevents overwriting business-assigned labels |
 | Exponential back-off | Handles transient 5xx and rate-limit (429) responses gracefully |
-| `CollectionNode.path_label` is pure | Label derivation has no I/O, making it fully unit-testable without Purview access |
-
 ---
