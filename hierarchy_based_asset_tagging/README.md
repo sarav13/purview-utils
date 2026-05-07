@@ -1,8 +1,8 @@
-# Purview Hierarchical Labeler
+# Purview Hierarchical Tagging
 
 Recursively traverses Microsoft Purview collections from a configurable root,
 generates normalized hierarchical labels from collection paths, and applies
-them to every asset — preserving all existing labels.
+them to every asset - preserving all existing labels.
 
 ---
 
